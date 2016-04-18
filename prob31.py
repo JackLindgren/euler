@@ -29,3 +29,5 @@ for onehun in range(0,3):
 						for one in range(0,201):
 							if (onehun * 100) + (fifty * 50) + (twenty * 20) + (ten * 10) + (five * 5) + (two * 2) + (one * 1) == 200:
 								combinations += 1
+
+print combinations
