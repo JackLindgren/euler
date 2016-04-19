@@ -18,16 +18,17 @@
 # 2   x 100
 # 1   x 200
 
-combinations = 1
+combinations = 0
 
-for onehun in range(0,3):
-	for fifty in range(0,5):
-		for twenty in range(0,11):
-			for ten in range(0,21):
-				for five in range(0,41):
-					for two in range(0,101):
-						for one in range(0,201):
-							if (onehun * 100) + (fifty * 50) + (twenty * 20) + (ten * 10) + (five * 5) + (two * 2) + (one * 1) == 200:
+for one in range(0,201):
+	for two in range(one,101):
+		for five in range(two,41):
+			for ten in range(five,21):
+				for twenty in range(ten,11):
+					for fifty in range(twenty,5):
+						for hundred in range(fifty,3):
+							for twohundred in range(hundred,2):
 								combinations += 1
+
 
 print combinations
