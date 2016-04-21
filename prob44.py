@@ -7,14 +7,14 @@ for n in range(1,1000000):
 	pentNums.append(pnum)
 
 def isPentNum(num):
-  pentest = (math.sqrt(1 + 24 * num) + 1 ) / 6
-  return pentest == int(pentest)
+	pentest = (math.sqrt(1 + 24 * num) + 1 ) / 6
+	return pentest == int(pentest)
 
 for o in pentNums:
-  for i in pentNums:
-    if isPentNum(o + i):
-      if isPentNum(abs(o - i)):
-        print o, i
+	for i in pentNums[0:pentNums.index(o)]:
+		if isPentNum(o + i):
+			if isPentNum(abs(o - i)):
+				print o, i, abs(o - i)
 
 
 #i = 0
