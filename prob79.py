@@ -18,9 +18,6 @@ for o in range(0,10):
 				elif list(t).index(str(i)) > list(t).index(str(o)):
 					pairs.append([o, i])
 
-for p in dedupe(pairs):
-	print p
-
 for i in range(0,10):
 	numAfter = []
 	for p in dedupe(pairs):
@@ -34,3 +31,10 @@ for i in range(0,10):
 		if p[1] == i:
 			numBefore.append(p[0])
 	print "Comes before {0}:".format(i), numBefore
+
+# put them into lists somehow
+# check for numbers that have nothing in the before or after
+# find the number with the maximum length of its "after" list - this is the first value
+# the next number is number with the shortest non-zero "before" list
+# the last number is the number with the longest "before" list
+# 
